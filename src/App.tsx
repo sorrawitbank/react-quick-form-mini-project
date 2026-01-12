@@ -1,5 +1,11 @@
+import MovieSurvey from "./components/MovieSurvey";
+
 function App() {
-  return <h1 className="text-2xl font-semibold">Movie Survey</h1>;
+  return (
+    <main className="flex flex-col justify-center items-center bg-linear-to-br from-slate-100 to-slate-200">
+      <MovieSurvey />
+    </main>
+  );
 }
 
 export default App;

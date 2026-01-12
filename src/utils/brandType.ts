@@ -1,0 +1,6 @@
+declare const __brand: unique symbol;
+type Brand<T, B extends string> = T & {
+  [__brand]: B;
+};
+
+export type Email = Brand<string, "email">;
