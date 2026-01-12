@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  /* Font Family - Set as default*/
+  --default-font-family: Arial, Helvetica, sans-serif;
+
+  /* Brand Colors */
+  --color-brand-purple: #7e22ce;
+  --color-brand-red: #ef4444;
+  --color-brand-green: #166534;
+  --color-brand-soft-green: #f0fdf4;
+
+  /* Base Colors */
+  --color-grey-200: #0a0a0a;
+  --color-grey-100: #737373;
+  --color-grey-50: #e5e5e5;
 }
