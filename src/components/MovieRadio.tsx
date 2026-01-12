@@ -1,20 +1,13 @@
-import { useState } from "react";
 import type { Movie } from "../data/movies";
 
 interface Props {
   movies: Movie[];
-  setMovie: (movieValue: string) => void;
+  onChange: (movieValue: string) => void;
+  selectedMovie: string;
   errorLabel?: string;
 }
 
 function MovieRadio(props: Props) {
-  const [selectedMovie, setSelectedMovie] = useState<string>("");
-
-  const handleMovieChange = (movieValue: string) => {
-    setSelectedMovie(movieValue);
-    props.setMovie(movieValue);
-  };
-
   return (
     <div
       className={`flex flex-col gap-2 ${
@@ -26,14 +19,14 @@ function MovieRadio(props: Props) {
           <div
             key={movie.title}
             className="flex gap-2 p-2 cursor-pointer hover:bg-grey-50 rounded"
-            onClick={() => handleMovieChange(movie.title)}
+            onClick={() => props.onChange(movie.title)}
           >
             <input
               type="radio"
               name="movie-selection"
               value={movie.title}
-              checked={selectedMovie === movie.title}
-              onChange={() => handleMovieChange(movie.title)}
+              checked={props.selectedMovie === movie.title}
+              onChange={() => props.onChange(movie.title)}
               className="h-fit mt-1"
             />
             <div className="grid gap-1 text-sm">

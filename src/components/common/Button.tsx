@@ -20,7 +20,7 @@ function Button(props: ButtonProps) {
         props.borderColor && `border border-${props.borderColor}`
       } rounded-lg cursor-pointer`}
     >
-      <div className="flex items-center gap-2">{props.children}</div>
+      <div className="flex justify-center items-center gap-2">{props.children}</div>
     </button>
   );
 }
